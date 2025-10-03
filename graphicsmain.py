@@ -1,6 +1,7 @@
 from gamemodel import *
 from graphics import *
 
+#detta är liv
 
 class GameGraphics:
     def __init__(self, game):
