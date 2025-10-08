@@ -1,0 +1,18 @@
+
+- kan delas upp i graphicsmain, samt gamemodel där Game klassen och Player klassen är två olika delar. Två personer kan vara på samma del.
+
+- gamemodel.py är för första delen av projektet. Själva koden och hur det funkar
+- graphicsmain.py är för andra delen, det visuella
+- textmain.py behöver vi inte ändra 
+- test.py kör tester på den faktiska koden och inte grafiken
+- graphics.py ska inte heller ändras
+
+Round: A game consists of multiple rounds, and each round consists of multiple turns. A round ends when a player hits the other player's cannon, winning the round. When a round ends, the victorious player is given a point and the wind speed is changed to a new value. The starting player for each new round is the player who lost the last round.
+
+Turn: On each turn a player aims his cannon and fires, and then the turn passes to the other player. Note that wind speed does not change between turns, only between rounds.
+
+Wind: Wind speed starts as a random value between -10 and +10. When a round ends, a new random wind speed is generated. Wind speed affects the horizontal velocity of cannonballs. A negative wind speed accelerates cannonballs towards the west/left and a positive value towards the east/right. A high wind speed (near +/-10) affects the cannonball in the horizontal direction the same way gravity affects it in the vertical, so a cannonball could change direction and "fall" back towards the player that fired it! The unit for wind speed is m/s2, a few observations should be made about this:
+
+It is not actually the speed of the wind, rather it is the constant acceleration that affects cannonballs. This is not an accurate model of how wind works in real life, but it is close enough to make it feel realistic and to make the game interesting.
+
+The fact that it uses meters and seconds has few implications on the game, internally it uses abstract units of distance and time and the simulation can be sped up or slowed down. However the way we implement gravity for cannonballs implies that the units are meters and seconds.

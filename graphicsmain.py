@@ -1,7 +1,7 @@
 from gamemodel import *
 from graphics import *
 
-#detta är liv
+#DEL 2 av projektet. Grafiken
 
 class GameGraphics:
     def __init__(self, game):

@@ -1,6 +1,8 @@
 from math import sin,cos,radians
 import random
 
+#DEL 1 av projektet. Logiken
+
 #TODO: Deal with all TODOs in this file and also remove the TODO and HINT comments.
 
 """ This is the model of the game"""
