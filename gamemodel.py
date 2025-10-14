@@ -60,7 +60,6 @@ class Game:
     """ Start a new round with a random wind value (-10 to +10) """
     def newRound(self):
         self.wind = (random.random() * 20) - 10
-        self.velocity = 40
         return self.wind
 
 """ Models a player """
@@ -83,13 +82,13 @@ class Player:
         xLower = -110
         xUpper = 110
 
+        self.cannonAngle = angle
+        self.velocity = velocity
+
         if self.isReversed == True:
             angle = 180 - angle
 
         proj = Projectile(angle, velocity, wind, xPos, yPos, xLower, xUpper)
-
-        self.angle = angle
-        self.velocity = velocity
 
         return proj
 
