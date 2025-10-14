@@ -51,18 +51,20 @@ class GameGraphics:
     def fire(self, angle, vel):
         playerNr = self.game.getCurrentPlayerNumber()
         player = self.game.getCurrentPlayer()
+        color = player.getColor()
 
         if self.draw_projs[playerNr] != None:
             self.draw_projs[playerNr].undraw()
 
         proj = player.fire(angle, vel)
 
-        ballRadius = (self.game.getBallSize())/2
+        ballRadius = (self.game.getBallSize())
 
         circle_X = proj.getX()
         circle_Y = proj.getY()
 
         circle = Circle(Point(circle_X, circle_Y), ballRadius)
+        circle.setFill(color)
 
         self.draw_projs[playerNr] = circle.draw(self.win)
 
